@@ -236,3 +236,46 @@ docker-compose down -v
 - This setup is intended for **local development and demonstration purposes**.
 - Docker ensures consistent behavior across different systems.
 - Environment variables for database connectivity are managed via `docker-compose.yml`.
+
+## Local Development Tools
+
+This section documents the tools and environment used for developing **IESCP**. Listing these tools ensures the project can be reproduced consistently and demonstrates adherence to standard software engineering practices.
+
+---
+
+### Operating System
+
+- **macOS Tahoe**
+
+---
+
+### Core Development Tools
+
+- **Docker Desktop** – Used for containerizing and running the frontend, backend, and database services via Docker Compose
+- **Git** – Used for version control and branch management following GitHub Flow
+
+---
+
+### Programming Languages & Runtimes
+
+- **Node.js (LTS)** – Used for building and bundling the Vue.js frontend
+- **Python 3.x** – Used for implementing the Flask backend API
+
+---
+
+### Frameworks & Technologies
+
+- **Vue.js (with Vite)** – Frontend single-page application framework
+- **Flask** – Backend REST API framework
+- **SQLAlchemy** – ORM for database interactions
+- **PostgreSQL** – Relational database used in the Dockerized environment
+
+---
+
+### Development Environment
+
+- **Kiro IDE** – Primary code editor used for frontend, backend, and configuration development
+
+---
+
+These tools collectively support a clean, reproducible, and container-friendly development workflow for the IESCP project.
