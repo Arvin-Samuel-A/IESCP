@@ -1,2 +1,61 @@
-/.DS_Store
+# =========================
+# OS / Editor Files
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
 /.kiro
+*.swp
+
+# =========================
+# Python (Backend)
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+venv/
+.env/
+instance/
+*.sqlite3
+*.db
+
+# =========================
+# Flask / Python Logs
+# =========================
+*.log
+
+# =========================
+# Node / Vue (Frontend)
+# =========================
+node_modules/
+dist/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Vite
+# =========================
+.vite/
+
+# =========================
+# Docker
+# =========================
+*.tar
+docker-compose.override.yml
+
+# =========================
+# Build / Coverage
+# =========================
+coverage/
+*.lcov
+
+# =========================
+# Temporary / Backup Files
+# =========================
+*.tmp
+*.bak
