@@ -136,4 +136,103 @@ This workflow ensures:
 
 ---
 
-This document defines the vision and scope of IESCP and serves as the foundation for further planning, prioritization, and architectural decisions.
+## Quick Start – Local Development
+
+This section explains how to run **IESCP** locally using **Docker** and **Docker Compose**. The setup runs the frontend, backend, and database as isolated containers, closely simulating a real deployment environment.
+
+---
+
+### Prerequisites
+
+Ensure the following tools are installed on your system:
+
+- **Git** (for cloning the repository)
+- **Docker Desktop** (includes Docker Engine and Docker Compose)
+
+Verify installation:
+
+```bash
+docker --version
+docker-compose --version
+```
+
+---
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/IESCP.git
+cd IESCP
+```
+
+---
+
+### Project Structure (Relevant to Docker)
+
+```text
+IESCP/
+├── backend/              # Flask backend (Dockerized)
+│   ├── app.py
+│   ├── orm.py
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/             # Vue.js frontend (Dockerized)
+│   ├── src/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── Dockerfile
+├── docker-compose.yml    # Multi-container orchestration
+└── README.md
+```
+
+---
+
+### Build and Run the Application
+
+From the **root of the repository**, run:
+
+```bash
+docker-compose build
+docker-compose up
+```
+
+This command will:
+- Build Docker images for the frontend and backend
+- Start the PostgreSQL database container
+- Start all services on a shared Docker network
+
+---
+
+### Access the Application
+
+Once all containers are running:
+
+- **Frontend (Vue.js SPA):** http://localhost:3000
+- **Backend API (Flask):** http://localhost:5000
+- **PostgreSQL Database:** localhost:5432
+
+Logs for each service will be visible in the terminal.
+
+---
+
+### Stopping the Application
+
+To stop all running containers:
+
+```bash
+docker-compose down
+```
+
+To stop containers and remove volumes:
+
+```bash
+docker-compose down -v
+```
+
+---
+
+### Notes
+
+- This setup is intended for **local development and demonstration purposes**.
+- Docker ensures consistent behavior across different systems.
+- Environment variables for database connectivity are managed via `docker-compose.yml`.
