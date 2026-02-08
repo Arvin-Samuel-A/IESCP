@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: iescp-backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://iescp_user:iescp_pass@db:5432/iescp_db
+    networks:
+      - iescp-network
+
+  frontend:
+    build: ./frontend
+    container_name: iescp-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - iescp-network
+
+  db:
+    image: postgres:15
+    container_name: iescp-db
+    restart: always
+    environment:
+      POSTGRES_USER: iescp_user
+      POSTGRES_PASSWORD: iescp_pass
+      POSTGRES_DB: iescp_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - iescp-network
+
+volumes:
+  postgres_data:
+
+networks:
+  iescp-network:
