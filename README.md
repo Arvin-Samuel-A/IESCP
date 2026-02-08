@@ -81,7 +81,7 @@ To create a transparent, secure, and governed digital marketplace that streamlin
 
 ### Constraints
 
-* SQLite is used as the database for simplicity and local deployment
+* PostgreSQL is used as the database for simplicity and local deployment
 * Session‑based authentication is used instead of JWT
 * The platform is designed as a monolithic web application
 * Payments are tracked logically but not processed through an external payment gateway
@@ -92,7 +92,7 @@ To create a transparent, secure, and governed digital marketplace that streamlin
 
 * **Frontend:** Vue.js (SPA)
 * **Backend:** Flask (REST API)
-* **Database:** SQLite with SQLAlchemy ORM
+* **Database:** PostgreSQL with SQLAlchemy ORM
 * **Authentication:** Session‑based with role validation
 * **Deployment (Local):** Docker‑based setup
 
