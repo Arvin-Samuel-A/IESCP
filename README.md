@@ -98,4 +98,42 @@ To create a transparent, secure, and governed digital marketplace that streamlin
 
 ---
 
+## Branching Strategy and GitHub Flow
+
+This project follows the **GitHub Flow** branching strategy to keep development simple, structured, and traceable.
+
+### Main Branch
+- The `main` branch always represents a **stable and deployable** version of the project.
+- All documentation, architecture diagrams, and verified features are merged into `main`.
+
+### Feature Branches
+- New work is developed in **feature branches** created from `main`.
+- Each feature branch focuses on a single task or improvement, such as:
+  - documentation updates
+  - UI changes
+  - backend enhancements
+  - DevOps setup
+
+### Workflow
+1. Create a new feature branch from `main`
+2. Implement the required changes
+3. Commit changes with clear messages
+4. Merge the feature branch back into `main` after verification
+
+This workflow ensures:
+- Clean commit history
+- Isolation of incomplete work
+- Easier collaboration and review
+
+---
+
+## Development Workflow Summary
+
+- Branching Model: **GitHub Flow**
+- Default Branch: `main`
+- Feature Branch Naming Convention: `feature/<short-description>`
+- Merge Strategy: Fast-forward or squash merge for clarity
+
+---
+
 This document defines the vision and scope of IESCP and serves as the foundation for further planning, prioritization, and architectural decisions.
