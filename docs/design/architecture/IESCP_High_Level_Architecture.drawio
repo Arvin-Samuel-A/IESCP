@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15" version="29.3.8">
+  <diagram name="Page-1" id="UrAi1fYiTcTfU-WNd6DL">
+    <mxGraphModel dx="1670" dy="1133" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-23" edge="1" parent="1" source="jZkyFuAiKcvkidaY4PMN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="jZkyFuAiKcvkidaY4PMN-5" value="Hosted Frontend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-1" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#333333;" value="&lt;b&gt;Frontend (Vue.js SPA)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Role-based UI (Admin / Sponsor / Influencer)&lt;br&gt;Vue Router&lt;br&gt;Vuex State Management&lt;br&gt;&lt;br&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Runs in browser&lt;br&gt;Communicates via HTTP/REST&lt;/i&gt;" vertex="1">
+          <mxGeometry height="180" width="220" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-22" edge="1" parent="1" source="jZkyFuAiKcvkidaY4PMN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="jZkyFuAiKcvkidaY4PMN-5" value="Routed Through LB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-2" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#333333;" value="&lt;b&gt;Backend API (Flask + Flask-RESTful)&lt;/b&gt;&lt;br&gt;&lt;br&gt;REST APIs&lt;br&gt;Role-based authorization&lt;br&gt;Session-based authentication&lt;br&gt;Business logic (Campaigns, Ad Requests, Negotiation)" vertex="1">
+          <mxGeometry height="180" width="220" x="22" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-3" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;" value="&lt;b&gt;Database (PostgreSQL+ SQLAlchemy ORM)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Users (Admin, Sponsor, Influencer)&lt;br&gt;Campaigns&lt;br&gt;Ad Requests&lt;br&gt;Industries&lt;br&gt;Sessions" vertex="1">
+          <mxGeometry height="180" width="220" x="420" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-4" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;" value="&lt;b&gt;Docker&lt;/b&gt;&lt;br&gt;&lt;br&gt;Containerized frontend&lt;br&gt;Containerized backend&lt;br&gt;Image packaging for deployment" vertex="1">
+          <mxGeometry height="180" width="220" x="733" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-5" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#333333;" value="&lt;b&gt;AWS Cloud Deployment&lt;/b&gt;&lt;br&gt;&lt;br&gt;AWS EC2 / ECS (Backend)&lt;div&gt;AWS S3 (Frontend)&lt;/div&gt;&lt;div&gt;AWS ELB&lt;/div&gt;&lt;div&gt;Security Groups&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="220" x="1073" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-6" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontColor=#333333;" value="Authentication&lt;br&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;Session Token Validation&lt;/i&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="78" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-7" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontColor=#333333;" value="&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;Rectangle = System Component&lt;br&gt;Arrow = Data Flow" vertex="1">
+          <mxGeometry height="60" width="150" x="572" y="543" as="geometry" />
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-8" edge="1" parent="1" source="jZkyFuAiKcvkidaY4PMN-1" style="endArrow=classic;html=1;rounded=0;fontColor=#333333;" target="jZkyFuAiKcvkidaY4PMN-2" value="HTTP Requests&lt;div&gt;(REST APIs)&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0046" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-9" edge="1" parent="1" source="jZkyFuAiKcvkidaY4PMN-2" style="endArrow=classic;html=1;rounded=0;fontColor=#333333;" target="jZkyFuAiKcvkidaY4PMN-3" value="ORM Queries&lt;div&gt;(SQLAlchemy)&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0066" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-12" edge="1" parent="1" source="jZkyFuAiKcvkidaY4PMN-4" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="jZkyFuAiKcvkidaY4PMN-5" value="Container&amp;nbsp;&lt;div&gt;Images&lt;/div&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1091" y="177" as="sourcePoint" />
+            <mxPoint x="799" y="233" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-17" edge="1" parent="1" source="jZkyFuAiKcvkidaY4PMN-3" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="jZkyFuAiKcvkidaY4PMN-2" value="Query Results">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="514.9999999999995" y="266" as="sourcePoint" />
+            <mxPoint x="564.9999999999995" y="216" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jZkyFuAiKcvkidaY4PMN-19" edge="1" parent="1" source="jZkyFuAiKcvkidaY4PMN-2" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="jZkyFuAiKcvkidaY4PMN-1" value="JSON Response">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="458" y="371" as="sourcePoint" />
+            <mxPoint x="508" y="321" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
