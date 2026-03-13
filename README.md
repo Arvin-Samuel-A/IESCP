@@ -98,6 +98,43 @@ To create a transparent, secure, and governed digital marketplace that streamlin
 
 ---
 
+## Software Design
+
+### Architecture Overview
+
+IESCP follows a Client-Server architecture combined with a layered architecture pattern. The Presentation Layer is a Vue.js SPA that delivers role-based dashboards and interaction flows. The Application Layer is a Flask REST API that centralizes validation, orchestration, and business rules. The Data Layer uses SQLite for lightweight development and PostgreSQL for containerized deployment. The Deployment Layer packages services in Docker containers with an AWS-ready trajectory.
+
+This structure was selected to enforce separation of concerns, scale layers independently, simplify testing and maintenance, and allow the UI or database stack to evolve without rewriting the full system.
+
+Architecture diagram: ![IESCP High-Level Architecture](docs/design/architecture/IESCP_High_Level_Architecture.drawio.png)
+
+Editable source: [IESCP_High_Level_Architecture.drawio](docs/design/architecture/IESCP_High_Level_Architecture.drawio)
+
+### Design Principles Applied
+
+Abstraction is enforced through the REST API boundary and SQLAlchemy ORM so UI and persistence remain isolated. Modularity is reflected in Vue components and Flask Blueprints that separate feature areas. High cohesion is maintained by keeping each dashboard and API module focused on a single responsibility. Low coupling is achieved through stateless request-response interactions and containerized services, enabling independent changes across frontend, backend, and infrastructure.
+
+### User Interface Design
+
+The UI uses a role-based dashboard model with persistent sidebar navigation, clear call-to-action buttons, structured tables/forms, and inline feedback messages for user guidance. The Vue component architecture also supports responsive enhancement over time without large structural rewrites.
+
+UI assets: [docs/design/ui/](docs/design/ui/)
+
+Figma prototype: [Low-Fidelity Wireframe Design](https://www.figma.com/make/pDZOBtbdgeNJJxKlUSL7Gm/Low-Fidelity-Wireframe-Design?p=f&t=2CvLl1zcoqSb2CYT-0&fullscreen=1)
+
+### Key Design Decisions
+
+- Separate AdRequest negotiation entity for lifecycle clarity
+- Use SPA architecture for responsive UX
+- Use REST APIs for frontend-backend decoupling
+- Use Docker containerization for deployment portability
+
+### Maintainability Focus
+
+The design intentionally supports future microservices migration, caching layer introduction, payment gateway integration, analytics and recommendation modules, and cloud auto-scaling deployment while preserving clear module boundaries.
+
+---
+
 ## Branching Strategy and GitHub Flow
 
 This project follows the **GitHub Flow** branching strategy to keep development simple, structured, and traceable.
